@@ -2,20 +2,27 @@
 Master's paper on quantum network routing: linear/mesh simulations, hybrid rule, and RL agent
 # Quantum Network Routing Thesis
 
-Master's thesis on routing in noisy quantum networks: linear-5 chain, 3x3 mesh, hybrid F³/d rule, and PPO RL agent.
+Master's paper on routing in noisy quantum networks: linear-5 chain, 3x3 mesh, hybrid F³/d rule, and PPO RL agent.
 
 ## Quick Start
-1. Setup env:  conda activate qrouting_new
+1. Install dependencies:
 
-2. Run linear experiments: `python run_small_experiments_fixed.py` (540 episodes, ~30 sec)  
+conda create -n qrouting_new python=3.11
+conda activate qrouting_new
+conda install numpy=1.26.4 pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
+pip install stable-baselines3[extra]==2.3.2 gymnasium==0.29.1 shimmy tensorboard matplotlib pandas seaborn
 
-3. Run mesh experiments: `python run_mesh_experiments.py` (1620 episodes, ~3 min)  
+2. Setup env:  conda activate qrouting_new
 
-4. Analyze mesh: `python analyze_mesh.py` (bar plot + table)  
+3. Run linear experiments: `python run_small_experiments_fixed.py` (540 episodes, ~30 sec)  
 
-5. Path visualization: `python plot_paths.py`  
+4. Run mesh experiments: `python run_mesh_experiments.py` (1620 episodes, ~3 min)  
 
-6. RL evaluation: `python eval_rl.py` (500 trials, ~8 sec)  
+5. Analyze mesh: `python analyze_mesh.py` (bar plot + table)  
+
+6. Path visualization: `python plot_paths.py`  
+
+7. RL evaluation: `python eval_rl.py` (500 trials, ~8 sec)  
 
 ## Files Overview
 - Linear sim: qunet_env_linear5.py, run_small_experiments_fixed.py  
@@ -26,6 +33,6 @@ Master's thesis on routing in noisy quantum networks: linear-5 chain, 3x3 mesh, 
 - Original runners: run_small_experiments.py, run_small_experiments1.py  
 - Data: results_linear5_correct_540.csv, results_mesh9_1620.csv  
 
-Thesis PDF and LaTeX included.
+Thesis PDF included.
 
 License: MIT
