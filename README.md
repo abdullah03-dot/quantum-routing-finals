@@ -1,4 +1,4 @@
-# quantum-routing-finals
+# quantum-hybrid-routing
 Master's paper on quantum network routing: linear/mesh simulations, hybrid rule, and RL agent
 # Quantum Network Routing Thesis
 
